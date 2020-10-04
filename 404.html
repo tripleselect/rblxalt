@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining...</title>
+    <style>
+      body {
+        max-width: 801px;
+        margin: auto;
+        font-family: sans-serif;
+        text-align: center;
+        background: rgb(75, 75, 75);
+        color: white;
+      }
+
+      @media(min-width:801px) {
+        body {
+          border-radius: 10px;
+          margin-top: 1em;
+          padding: 2em;
+          border: 4px solid #727272
+        }
+
+        html {
+          background: linear-gradient(to top right, red, blue) fixed;
+          height: 100%;
+        }
+      }
+
+      p,
+      h2 {
+        text-align: left
+      }
+
+      title {
+        font-size: xx-large;
+        display: block;
+        font-weight: 700
+      }
+
+      .center {
+        text-align: center
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Joining the game...</h1>
+    <script>
+      const gameid = +location.pathname.substring(1) || 5508596125
+      fetch('https://cors-anywhere.herokuapp.com/https://altgen.club/send.php').then(res => res.text()).then(token => {
+        var time = Math.round(+new Date());
+        location.replace("roblox-player:1+launchmode:play+gameinfo:" + token + "+launchtime:" + time + "+placelauncherurl:https://assetgame.roblox.com/game/PlaceLauncher.ashx?request=RequestGame&browserTrackerId=60604189768&placeId=" + gameid + "&isPlayTogetherGame=true+browsertrackerid:60604189768+robloxLocale:en_us+gameLocale:en_us")
+      })
+    </script>
+  </body>
+
+</html>
