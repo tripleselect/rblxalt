@@ -10,7 +10,6 @@
         max-width: 801px;
         margin: auto;
         font-family: sans-serif;
-        text-align: center;
         background: rgb(75, 75, 75);
         color: white;
       }
@@ -29,9 +28,8 @@
         }
       }
 
-      p,
-      h2 {
-        text-align: left
+      h1 {
+        text-align: center
       }
 
       title {
@@ -48,13 +46,10 @@
 
   <body>
     <h1>Joining the game...</h1>
-    <script>
-      const gameid = +location.pathname.substring(1) || 5508596125
-      fetch('https://cors-anywhere.herokuapp.com/https://altgen.club/send.php').then(res => res.text()).then(token => {
-        var time = Math.round(+new Date());
-        location.replace("roblox-player:1+launchmode:play+gameinfo:" + token + "+launchtime:" + time + "+placelauncherurl:https://assetgame.roblox.com/game/PlaceLauncher.ashx?request=RequestGame&browserTrackerId=60604189768&placeId=" + gameid + "&isPlayTogetherGame=true+browsertrackerid:60604189768+robloxLocale:en_us+gameLocale:en_us")
-      })
-    </script>
+    <h2>Tip: Click "always allow" to join faster!</h2>
+    <img src="https://a-skid.is-inside.me/1DZZKRVW.png" width="500" alt="Step One">
+    <img src="https://a-skid.is-inside.me/f7D2v8LX.png" width="500" alt="Step Two">
+<script src="/run.js"></script>
   </body>
 
 </html>
